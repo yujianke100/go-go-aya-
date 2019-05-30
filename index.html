@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>幻想乡最速传说！</title>
+    <link rel="shortcut icon" href="./pic/ayaIco.ico" />
+    <link rel="bookmark" href="./pic/ayaIco.ico" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <p>解决拦路的乌鸦，冲向瀑布的顶点</p>
+        <p>完成试炼，创造幻想乡的最速传说吧！</p>
+        <button class="btn startBtn" id="startBtn">
+            游戏开始
+        </button>
+        <button class="btn cheatBtn" id="cheatBtn">
+            Go to 9 LEVEL!
+        </button>
+    </header>
+    <div class="game">
+        <div class="container" id="container">
+            <div class="score">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header" id="scoreListBtn">排行榜(前十)</div>
+                        <div class="collapsible-body" id="scoreList">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">操作说明</div>
+                        <div class="collapsible-body">
+                            <p>方向键移动</p>
+                            <p>Z发射弹幕</p>
+                            <p>X使用特殊符卡</p>
+                            <p>按住shift开启高火力模式,此时会显示体术判定点</p>
+                            <p>ENTER开始游戏</p>
+                            <p>P或ESC暂停/继续</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">游戏帮助</div>
+                        <div class="collapsible-body">
+                            <p>每消灭十只乌鸦，等级提高一，并获得额外一枚特殊符卡</p>
+                            <p>每提升五个等级，获得一架残机</p>
+                            <p>未被消灭的乌鸦会保持血量再次出现</p>
+                            <p>火力会在等级达到3、6、9级时提升</p>
+                            <p>开合排行榜可进行数据更新</p>
+                            <p>若页面显示不正常，可尝试进行缩放</p>
+                            <p>BGM:フォールオブフォール ～ 秋めく滝</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">选项</div>
+                        <div class="collapsible-body">
+                            <p><button class="btn waves-effect waves-light" id="waterfallSwitch">关闭瀑布特效</button></p>
+                            <p><button class="btn waves-effect waves-light" id="specialCardSwitch">关闭特殊符卡特效</button></p>
+                            <p><button class="btn waves-effect waves-light"
+                                    id="specialCardShadowSwitch">开启特殊符卡阴影特效</button></p>
+                            <button class="btn outBtn red waves-effect waves-light" id="outBtn">退出登录</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">关于</div>
+                        <div class="collapsible-body">
+                            <p>原作:</p>
+                            <img src="./pic/shanghaiAlice.jpg" alt="">
+                            <p>本游戏绝大多数素材来自互联网</p>
+                            <p>若对原作者造成困扰，请随时联系站长处理</p>
+                            <p>本游戏仅作学习交流使用</p>
+                            <p>源代码已公开于<a target="blank" href="https://github.com/yujianke100/go-go-aya-">GitHub</a></p>
+                            <p>主站：<a href="shinnshi.xyz">shinnshi.xyz</a></p>
+                            <p>BY:登山学日文</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p class="gameOverP" id="gameOverP">满身疮痍</p>
+            <div class="msgRefresh" id="msgRefresh"></div>
+            <div class="canvas" id="canvas">
+                <canvas class="powerCircleCanvas gameCanvas" id="powerCircleCanvas" width="640" height="960"></canvas>
+                <canvas class="specialCardCanvas gameCanvas" id="specialCardCanvas" width="640" height="960"></canvas>
+                <canvas class="ayaCanvas gameCanvas" id="ayaCanvas" width="640" height="960"></canvas>
+                <canvas class="danmakuCanvas gameCanvas" id="danmakuCanvas" width="640" height="960"></canvas>
+                <canvas class="crowCanvas gameCanvas" id="crowCanvas" width="640" height="960"></canvas>
+                <canvas class="effectCanvas gameCanvas" id="effectCanvas" width="640" height="960"></canvas>
+                <canvas class="bCanvas gameCanvas" id="bCanvas" width="640" height="960"></canvas>
+                <canvas class="gameCanvas" id="waterfall" width="640" height="960"></canvas>
+            </div>
+        </div>
+        <audio id="waterfallVoice" src="./sound/waterfall.mp3" loop="loop" autoplay="autoplay"></audio>
+        <audio id="danmakuVoice" autoplay="autoplay"></audio>
+        <audio id="danmakuVoice2" autoplay="autoplay"></audio>
+        <audio id="crowVoice" autoplay="autoplay"></audio>
+        <audio id="biu" autoplay="autoplay"></audio>
+        <audio id="specialCardVoice" autoplay="autoplay"></audio>
+    </div>
+    <footer>
+        <audio src="http://music.163.com/song/media/outer/url?id=22636645.mp3" autoplay="autoplay" controls="controls"
+            loop="loop"></audio>
+    </footer>
+    <script src="./userInfo.js"></script>
+    <script src="./js/variable.js"></script>
+    <script type="text/javascript" src='js/TweenMax.min.js'></script>
+    <script type="text/javascript" src="js/b-index.js"></script>
+    <script src="./js/waterfal.js"></script>
+    <script src="./js/Ccreate.js"></script>
+    <script src="./js/Cinfo.js"></script>
+    <script src="./js/Cdraw.js"></script>
+    <script src="./js/Cknock.js"></script>
+    <script src="./js/Ccontrol.js"></script>
+    <script src="./js/Cclean.js"></script>
+    <script src="./js/Cmsg.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

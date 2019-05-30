@@ -1,0 +1,164 @@
+HTML{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    /* background: #222; */
+    background-image: url(../pic/background.jpg);
+    background-repeat:no-repeat;
+    background-position:center -100px;
+    background-size:1980px 1080px;
+    background-color: black;
+    color: white;
+}
+p{
+    margin: 3px;
+}
+header{
+    position:absolute;
+    height: 5rem;
+    width: 100%;
+    background-image: url(../pic/headBackground.png);
+    background-size:640px 130px;
+    background-repeat:no-repeat;
+    background-position:center -20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    z-index: 109;
+}
+.game *{
+    position: absolute;
+}
+.score{
+    position: absolute;
+    padding: 30px 20px;
+    top: 0;
+    left: -400px;
+    z-index: 200;
+    font-size: 2rem;
+    text-align: center;
+    height: 100%;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.score *{
+    position: relative;
+    padding: 5px;
+}
+.score p{
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 10px 2px;
+}
+.collapsible-header{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.msgRefresh{
+    left: 640px;
+    width: 400px;
+    height: 960px;
+    padding: 180px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.msgRefresh *{
+    position: relative;
+    text-align: center;
+}
+.msgRefresh p{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.container{
+    position: relative;
+    height: 960px;
+    width: 640px;
+    margin: 0 auto;
+    background-color: #63c3cf;
+    color: white;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.btn{
+    position: relative;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #00000080;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.548);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 300;
+}
+.startBtn{
+    top: 400px;
+    left: 130px;
+}
+.specialCardImg{
+    opacity: 0;
+    top: 20%;
+    left: 20%;
+    /* z-index: 99; */
+}
+.cheatBtn{
+    top: 750px;
+    left: 410px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(66, 66, 66, 0.103);
+    box-shadow: none
+}
+.outBtn{
+    margin: 30px;
+}
+.gameCanvas{
+    text-align: left;
+    top: 0;
+    left: 0;
+}
+.powerCircleCanvas{
+    z-index: 101;
+}
+.specialCardCanvas{
+    z-index: 99;
+}
+.ayaCanvas{
+    z-index: 100;
+}
+.crowCanvas{
+    z-index: 101;
+}
+.danmakuCanvas{
+    z-index: 104;
+}
+.effectCanvas{
+    z-index: 105;
+}
+.bCanvas{
+    z-index: 97;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+.gameOverP{
+    position: absolute;
+    display: none;
+    text-align: center;
+    top: 400px;
+    left: 225px;
+    font-size: 3rem;
+    z-index: 106;
+}
+tr{
+    border:5px solid gray;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+th{
+    font-size: 1.5rem;
+}

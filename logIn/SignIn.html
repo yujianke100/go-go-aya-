@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../pic/ayaIco.ico" />
+    <link rel="bookmark"href="../pic/ayaIco.ico" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./logIn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+
+    <title>今天搞到了什么大新闻？</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logInContainer" id = "logInContainer">
+            <div class="logInBackground" id = "logInBackground"></div>
+            <p id = "newsTitile">閻魔様の暴走は一体何故か
+                ？</p>
+            <div class="login" id = "loginDiv">
+                <div class="photoBorder"></div>
+                <h3 id = "loginTitile">记者身份确认</h3>
+                <div class="formDiv row" id = "formDiv">
+                    <form class="col s12" action="downdata.php" method="post" id="text_form_in">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
+                                <label for="name">姓名：</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="password"  class = "validate" name="pass" id="pass" value=""  maxlength="18">
+                                <label for="pass">神秘代码：</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="btnDiv">
+                        <button class="signInCheckBtn btn" id = "signInCheckBtn">登陆</button>
+                        <button class="signUpCheckBtn btn" id = "signUpCheckBtn">完成</button>
+                        <button class="signUpBtn btn white" id = "signUpBtn">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./signScript.js"></script>
+    <audio src="http://music.163.com/song/media/outer/url?id=714920.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>

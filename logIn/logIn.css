@@ -1,0 +1,115 @@
+HTML{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.container{
+    position: relative;
+    top: 100px;
+    width: 500px;
+    height: 700px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 10px 10px 5px #888888;
+    color: black;
+    background-image: url(../pic/bunbunshinbun.jpg);
+    background-repeat:no-repeat;
+    background-position:360px 20px;
+    box-sizing: border-box;
+    border:5px solid rgb(214, 214, 214);
+}
+.container *{
+    position: relative;
+}
+p{
+    top: -53px;
+    padding: 10px;
+    width: 50px;
+    height: 550px;
+    font-size: 1.8rem;
+    left: 190px;
+    color: white;
+    background-color: rgb(41, 41, 41);
+}
+.logInContainer{
+    margin: 10px;
+    padding: 30px 180px 100px 100px;
+    height: 670px;
+    border:3px solid rgb(156, 156, 156);
+}
+.logInBackground{
+    position: absolute;
+    height: 664px;
+    width: 300px;
+    left: 0;
+    top: 0;
+    background-image: url(../pic/shikieiki.jpg);
+    background-repeat:no-repeat;
+    background-size:450px 700px;
+    background-position:-100px 0;
+}
+.login{
+   box-shadow: 10px 10px 5px #888888;
+   background-color: rgb(245, 245, 245);
+   border:5px solid rgb(214, 214, 214);
+   padding: 15px 30px 100px 30px;
+   top: -600px;
+   left: 400px;
+   width: 290px;
+   height: 550px;
+   background-image: url(../pic/aya.png);
+   background-repeat:no-repeat;
+   background-size:70px 70px;
+   background-position:15px 28px;
+}
+.login *{
+    position: absolute;
+}
+label{
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+}
+.photoBorder{
+    height: 100px;
+    width: 80px;
+    left: 10px;
+    top: 20px;
+    border:5px dashed rgb(92, 92, 92);
+}
+h3{
+    left: 110px;
+    top: 35px;
+    font-size: 1.8rem;
+}
+.formDiv{
+    top: 200px;
+    width: 200px;
+}
+.formDiv *{
+    position: relative;
+}
+.zcwj{
+    left: 10px;
+}
+.btnDiv{
+    text-align: center;
+    top: 470px;
+    width: 250px;
+}
+.btnDiv *{
+    position: relative;
+    width: 100px;
+    left: -25px;
+    text-align: center;
+}
+.signUpBtn{
+    color: rgb(30, 105, 30);
+}
+.signUpCheckBtn{
+    display: none;
+}

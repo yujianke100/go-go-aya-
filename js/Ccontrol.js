@@ -1,5 +1,7 @@
 class Ccontrol{
      keys(keycode){
+         if(ayaKnocked == 1)
+            return;
          if(keycode == 90 && loopNum % 5 == 0){
              create.createDanmaku(1);
              if(level >= 3){
@@ -93,6 +95,8 @@ class Ccontrol{
      }
      KeyboardControl(){
         document.addEventListener("keydown",function(e){
+            if(ayaKnocked == 1)
+                return;
             if(e.keyCode == 80 || e.keyCode == 27){
                 if(btnFlag == 1){
                     startBtn.innerHTML = "继续";
@@ -146,9 +150,6 @@ class Ccontrol{
                 keyArray.splice(keyIndex, 1);
                 keyArray.sort()
             }
-            // if( ayaFlag != 1 && keyArray.indexOf(37) < 0 && keyArray.indexOf(38) < 0 && keyArray.indexOf(39) < 0 && keyArray.indexOf(40) < 0){
-            //         shiftSpeed = 2;
-            // }
         })
      }
  }

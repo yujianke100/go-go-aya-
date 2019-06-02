@@ -12,10 +12,9 @@ function getQueryString(name) {
     var r = window.location.search.substr(1).match(reg); 
     if (r != null) return unescape(r[2]); 
     return null; 
-} 
-var urlId = GetQueryString("id");
-if(urlId == 0){
-    modoFlag = 0;
+}
+
+function changePage0(){
     formDiv.innerHTML = `
     <form class="col s12" action="updata.php" method="post" id="text_form">
         <div class="row">
@@ -43,6 +42,7 @@ if(urlId == 0){
     newsTitile.innerHTML = `霍青娥が実は広東人ですか
     ？`;
 }
+
 signUpCheckBtn.addEventListener("click", function(){
     let text_form = document.getElementById('text_form');
     let name = document.getElementById("name").value;
@@ -84,12 +84,6 @@ signInCheckBtn.addEventListener("click", function(){
     return true;
 });
 
-function GetQueryString(name){   
-    var reg = new RegExp("(^|&)"+ name+"=([^&]*)(&|$)");     
-    var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则     
-    if(r!=null)return  unescape(r[2]); return null;
-}
-
 signUpBtn.addEventListener("click",function(){
     if(modoFlag == 1)
         modoFlag = 0;
@@ -97,32 +91,7 @@ signUpBtn.addEventListener("click",function(){
         modoFlag = 1;
     window.history.replaceState({}, 0, 'http://aya.shinnshi.xyz/logIn/SignIn.html?id=' + modoFlag);
     if(modoFlag == 0){
-        formDiv.innerHTML = `
-        <form class="col s12" action="updata.php" method="post" id="text_form">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
-                    <label for="name">姓名：</label>
-                </div>
-                <div class="input-field col s12">
-                    <input type="password"  class = "validate" name="pass" id="pass" value=""  maxlength="18">
-                    <label for="pass">神秘代码：</label>
-                </div>
-                <div class="input-field col s12">
-                    <input type="password"  class = "validate" name="qrpass" id="qrpass" value=""  maxlength="18">
-                    <label for="qrpass">重复神秘代码：</label>
-                </div>
-            </div>
-        </form>
-        `;
-        signUpBtn.innerHTML = "返回";
-        $(signInCheckBtn).hide();
-        $(signUpCheckBtn).show();
-        loginTitile.innerHTML = "新记者登记";
-        logInBackground.style.backgroundImage = "url(../pic/nyannyann.jpg)";
-        logInBackground.style.backgroundPosition = "-50px 0";
-        newsTitile.innerHTML = `霍青娥が実は広東人ですか
-        ？`;
+        changePage0();
     }
     else{
         formDiv.innerHTML = `
@@ -159,3 +128,9 @@ $("body").keydown(function() {
         }
     }
 });
+
+
+if(GetQueryString("id") == 0){
+    modoFlag = 0;
+    changePage0();
+}

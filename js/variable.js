@@ -42,6 +42,7 @@ specialCard.translate(320, 480);
 const ayaImg = new Image();
 ayaImg.src = "pic/pl03.png";
 
+
 const danmakuImg = new Image();
 danmakuImg.src = "pic/maple.png";
 

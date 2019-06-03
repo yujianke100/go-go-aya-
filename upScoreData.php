@@ -1,9 +1,7 @@
 <?php 
-
 $name=$_POST['name'];
 $pass=$_POST['password'];
 $score=$_POST['score'];
-
 // 创建连接   面向过程写法
 $conn = mysqli_connect("localhost", "aya", "5UQfrpjyjtpD303l", "aya");
 // Check connection
@@ -21,12 +19,11 @@ if ($result->num_rows <= 0) {
     if ($result->num_rows > 0) {
         $sql = "UPDATE ayaPlayer SET score = if('$score' > score, '$score', score) WHERE name = '$name'";
         mysqli_query($conn, $sql);
+        $sql = "UPDATE ayaPlayer SET tmpScore = '0' WHERE name = '$name'";
+        mysqli_query($conn, $sql);
     } else {
         echo "<script>window.location.href='./logIn/SignIn.html';alert('账号与密码不匹配，排行榜更新失败！')</script>";
     }
  }
-
-
 mysqli_close($conn);
-
  ?>

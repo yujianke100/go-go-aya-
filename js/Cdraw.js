@@ -291,23 +291,23 @@ class Cdraw{
         }
         else{
             for(i = 1; i < specialCardInfo.length; i++){
-                if(specialCardInfo[i] < 2000 && i % 3 == 0){
+                if(specialCardInfo[i] < 5000 && i % 3 == 0){
                     specialCardInfo[i] += 200;
                 }
-                else if(specialCardInfo[i] < 2000 && i % 2 == 0){
+                else if(specialCardInfo[i] < 5000 && i % 2 == 0){
                     specialCardInfo[i] += 100;
                 }
-                else if(specialCardInfo[i] < 2000){
+                else if(specialCardInfo[i] < 5000){
                     specialCardInfo[i] += 50;
                 }
                 if(specialCardInfo[0] > 0){
-                    specialCardInfo[0] -= 0.002;
+                    specialCardInfo[0] -= 0.001;
                 }
                 else{
                     specialCardInfo[0] = 0;
                 }
             }
-            if(specialCardInfo[0] <= 0.01){
+            if(specialCardInfo[0] <= 0){
                 specialCardHappened = 0;
                 specialCardFlag = 0;
                 specialCardInfo = [...specialCardInfoInit];

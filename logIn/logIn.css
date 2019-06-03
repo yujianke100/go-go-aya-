@@ -1,6 +1,7 @@
 HTML{
     overflow-x:hidden;
     overflow-y:hidden;
+    font-family: "宋体";
 }
 body{
     position: relative;

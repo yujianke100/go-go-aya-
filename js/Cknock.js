@@ -12,8 +12,20 @@ class Cknock{
                         create.createEffect(crowArry[j][0], crowArry[j][1]);
                         crowArryLength = clean.cleanArray(crowArry, j);
                         corwVoice.src = "./sound/crow.mp3";
-                        score += 1;
-                        scoreFlag += 1;
+                        $.post("tmpDownScoreData.php",{name : name},function(result){
+                            let tmpS = JSON.parse(result);
+                            if(tmpS.tmpScore == score){
+                                score += 1;
+                                scoreFlag += 1;
+                                $.post("tmpUpScoreData.php",{name : name, score : score},function(result){
+                                    console.log(result);
+                                });
+                            }
+                            else{
+                                score = -10000;
+                                alert("居然作弊？来来来，我给你看个大宝贝");
+                            }
+                        });
                         if(scoreFlag == 10){
                             level += 1;
                             specialCardNum += 1;

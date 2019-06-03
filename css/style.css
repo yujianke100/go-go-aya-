@@ -1,6 +1,7 @@
 HTML{
     overflow-x:hidden;
     overflow-y:hidden;
+    font-family: "宋体";
 }
 body{
     position: relative;
@@ -10,7 +11,7 @@ body{
     background-image: url(../pic/background.jpg);
     background-repeat:no-repeat;
     background-position:center -100px;
-    background-size:1980px 1080px;
+    background-size:1920px 1080px;
     background-color: black;
     color: white;
 }
@@ -161,4 +162,12 @@ tr{
 }
 th{
     font-size: 1.5rem;
+}
+.end{
+    position: relative;
+    width: 1920px;
+    height: 300px;
+    background-color: black;
+    margin: auto;
+    z-index: 300;
 }

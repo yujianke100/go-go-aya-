@@ -2,6 +2,7 @@ const scoreListBtn = document.querySelector("#scoreListBtn");
 const scoreList = document.querySelector("#scoreList");
 var userInfo = new CuserInfo();
 
+userInfo.cleanScore();
 
 function ajaxRefresh(){
     userInfo.getScore();

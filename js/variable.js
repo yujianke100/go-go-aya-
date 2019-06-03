@@ -1,3 +1,4 @@
+
 //selector
 const ayaCanvas =document.querySelector("#ayaCanvas");
 const danmakuCanvas =document.querySelector("#danmakuCanvas");
@@ -40,9 +41,6 @@ specialCard.translate(320, 480);
 //IMG
 const ayaImg = new Image();
 ayaImg.src = "pic/pl03.png";
-
-const redAyaImg = new Image();
-redAyaImg.src = "pic/aya_red.png";
 
 const danmakuImg = new Image();
 danmakuImg.src = "pic/maple.png";

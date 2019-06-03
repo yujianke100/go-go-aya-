@@ -12,6 +12,7 @@ var pass = tmpInfo.split(",")[1];
 control.buttonControl();
 control.KeyboardControl();
 msg.showUser();
+
 function animation(){
     requestAnimationFrame(function(){
         if(ayaKnocked == 0 && firstAyaLock == 0){

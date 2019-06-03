@@ -17,13 +17,13 @@ class Cknock{
                             if(tmpS.tmpScore == score){
                                 score += 1;
                                 scoreFlag += 1;
-                                $.post("tmpUpScoreData.php",{name : name, score : score},function(result){
-                                    console.log(result);
-                                });
+                                $.post("tmpUpScoreData.php",{name : name, score : score});
                             }
                             else{
                                 score = -10000;
                                 alert("居然作弊？来来来，我给你看个大宝贝");
+                                ayaKnocked = 1;
+                                biu.src = "./sound/combobreak.mp3";
                             }
                         });
                         if(scoreFlag == 10){

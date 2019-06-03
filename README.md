@@ -1,6 +1,7 @@
 # go-go-aya-
 # http://aya.shinnshi.xyz
 
+## 增加分支：反作弊
 ## 东方project同人小游戏
 
 没做chrome之外的浏览器的兼容，没搞1080P之外的分辨率。显示不全的缩放一下浏览器就行

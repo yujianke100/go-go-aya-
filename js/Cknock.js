@@ -42,6 +42,7 @@ class Cknock{
             if(w < red + 30 && w >  -red && h < red && h > -red){
                 ayaKnocked = 1;
                 danmakuArryLength = 0;
+                keyArray.splice(0, keyArray.length);
                 aya.clearRect(0, 0, aya.width, aya.height);
                 biu.src = "./sound/combobreak.mp3";
             }

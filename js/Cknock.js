@@ -12,16 +12,13 @@ class Cknock{
                         create.createEffect(crowArry[j][0], crowArry[j][1]);
                         crowArryLength = clean.cleanArray(crowArry, j);
                         corwVoice.src = "./sound/crow.mp3";
-                        $.post("tmpDownScoreData.php",{name : name},function(result){
+                        $.post("tmpUpScoreData.php",{name : name},function(result){
                             let tmpS = JSON.parse(result);
-                            if(tmpS.tmpScore == score){
+                            if(tmpS.tmpScore == score + 1){
                                 score += 1;
                                 scoreFlag += 1;
-                                $.post("tmpUpScoreData.php",{name : name, score : score});
                             }
                             else{
-                                score = -10000;
-                                alert("居然作弊？来来来，我给你看个大宝贝");
                                 ayaKnocked = 1;
                                 biu.src = "./sound/combobreak.mp3";
                             }
@@ -51,7 +48,7 @@ class Cknock{
         for(i = 0; i < crowArryLength; i ++){
             w = ayaLeft - crowArry[i][0];
             h = ayaTop- crowArry[i][1];
-            if(w < red + 30 && w >  -red && h < red && h > -red){
+            if(ayaKnocked == 0 && w < red + 30 && w >  -red && h < red && h > -red){
                 ayaKnocked = 1;
                 danmakuArryLength = 0;
                 aya.clearRect(0, 0, aya.width, aya.height);
@@ -63,12 +60,12 @@ class Cknock{
                     ayaTop = 1100;
                     ayaNum -= 1;
                     if(ayaNum == 0){
-                        btnFlag = 0;
                         lastScore = score;
                         score = 0;
                         msg.gameOverRefresh()
                         ayaKnocked = 0;
                         gameOverP.style.display = "block";
+                        i = crowArryLength;
                     }
                     else{
                         ayaKnocked = 0;

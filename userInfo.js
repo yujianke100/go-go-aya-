@@ -75,7 +75,6 @@ class CuserInfo{
                 msg.gameOverRefresh()
                 ayaKnocked = 0;
                 gameOverP.style.display = "block";
-                $.post("cleanData.php",{name : name});
             }
         });
     }

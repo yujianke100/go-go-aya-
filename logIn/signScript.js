@@ -61,8 +61,8 @@ var mb = BrowserType();
 
 
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    alert("请在PC端使用Chrome或Firefox浏览本站！");
-    window.location.href = "about:blank";
+    alert("请在PC端使用Chromee或Chrome内核的浏览器浏览本站！");
+    window.location.href = "http://shinnshi.xyz";
 } else {
     if (mb == "Chrome") {
         ;

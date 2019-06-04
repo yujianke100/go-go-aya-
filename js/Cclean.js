@@ -39,5 +39,6 @@ class Cclean{
         ayaFlag = 0;
         specialCardChangeFlag = 0;
         scoreFlag = 0;
+        ayaNumFlag = 0;
     }
 }

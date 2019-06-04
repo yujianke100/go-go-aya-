@@ -42,7 +42,6 @@ specialCard.translate(320, 480);
 const ayaImg = new Image();
 ayaImg.src = "pic/pl03.png";
 
-
 const danmakuImg = new Image();
 danmakuImg.src = "pic/maple.png";
 
@@ -59,7 +58,7 @@ var ayaTop = 960;
 // var ayaHeight = 90;
 const ayaWidth = 32;
 const ayaHeight = 48;
-var ayaSpeed = 7;
+var ayaSpeed = 10;
 var shiftSpeed = 0;
 var ayaFlag = 0;
 var red = 20;

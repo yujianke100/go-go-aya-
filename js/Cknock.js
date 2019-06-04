@@ -14,7 +14,7 @@ class Cknock{
                         corwVoice.src = "./sound/crow.mp3";
                         score += 1;
                         scoreFlag += 1;
-                        if(scoreFlag == 10){
+                        if(scoreFlag >= 10){
                             level += 1;
                             specialCardNum += 1;
                             scoreFlag = 0;

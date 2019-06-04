@@ -23,7 +23,7 @@ class Cknock{
                                 biu.src = "./sound/combobreak.mp3";
                             }
                         });
-                        if(scoreFlag == 10){
+                        if(scoreFlag >= 10){
                             level += 1;
                             specialCardNum += 1;
                             scoreFlag = 0;

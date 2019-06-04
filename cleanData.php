@@ -9,6 +9,8 @@ if (!$conn) {
 
 $sql = "UPDATE ayaPlayer SET tmpScore = '0' WHERE name = '$name'";
 mysqli_query($conn, $sql);
+$sql = "UPDATE ayaPlayer SET deadTime = '0' WHERE name = '$name'";
+mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 ?>

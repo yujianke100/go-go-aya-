@@ -11,6 +11,7 @@ class Cclean{
         return array.length;
     }
     initClean(){
+        $.post("cleanData.php",{name : name});
         bEffect.clearRect(0, 0, cw, ch);
         crow.clearRect(0, 0, 640, 960);
         effect.clearRect(0, 0, 640, 960);

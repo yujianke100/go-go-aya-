@@ -42,7 +42,7 @@ class Ccontrol{
             else if(btnFlag == 1){
                 startBtn.innerHTML = "继续";
                 btnFlag = 2;
-                startBtn.style.left = "130px";
+                startBtn.style.left = "100px";
                 startBtn.style.top = "400px";
             }
             else if(btnFlag == 2){
@@ -54,7 +54,7 @@ class Ccontrol{
             }
         });
         cheatBtn.addEventListener("click", function(){
-            level = 9;
+            level += 3;
         });
         specialCardSwitch.addEventListener("click", function(){
             if(specialCardSwitchFlag == 0){
@@ -101,7 +101,7 @@ class Ccontrol{
                 if(btnFlag == 1){
                     startBtn.innerHTML = "继续";
                     btnFlag = 2;
-                    startBtn.style.left = "130px";
+                    startBtn.style.left = "100px";
                     startBtn.style.top = "400px";
                 }
                 else if(btnFlag == 2){

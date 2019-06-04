@@ -19,7 +19,7 @@ class CuserInfo{
                 <th>too young too simple!</th>
             </tr>
             <tr>
-                <th>some times naive!</th>
+                <th>sometimes naive!</th>
             </tr>
         </table>
         `;

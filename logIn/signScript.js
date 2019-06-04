@@ -7,6 +7,72 @@ var logInBackground = document.querySelector("#logInBackground");
 var newsTitile = document.querySelector("#newsTitile");
 var modoFlag = 1;
 
+function BrowserType() {
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+
+    var isOpera = userAgent.indexOf("Opera") > -1;
+
+    var isEdge = userAgent.indexOf("Edge") > -1;
+
+    if (isEdge) {
+
+        return "Edge"
+
+    } //判断是否Opera浏览器
+
+    else if (userAgent.indexOf("Firefox") > -1) {
+
+        return "FF";
+
+    } //判断是否Firefox浏览器
+
+    else if (userAgent.indexOf("Chrome") > -1) {
+
+        return "Chrome";
+
+    }
+
+    else if (isOpera) {
+
+        return "Opera"
+
+    } //判断是否Opera浏览器
+
+
+    else if (userAgent.indexOf("Safari") > -1) {
+
+        return "Safari";
+
+    } //判断是否Safari浏览器
+
+    else if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+
+        return "IE";
+
+    } //判断是否IE浏览器
+    else {
+        return "Others"
+    }
+
+}
+    //以下是调用上面的函数
+var mb = BrowserType();
+
+
+
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    alert("请在PC端使用Chrome或Firefox浏览本站！");
+    window.location.href = "about:blank";
+} else {
+    if (mb == "Chrome") {
+        ;
+    }
+    else {
+        alert("请使用Chrome或Chrome内核的浏览器浏览本站！");
+        window.location.href = "http://shinnshi.xyz";
+    }
+}
+
 function getQueryString(name) { 
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
     var r = window.location.search.substr(1).match(reg); 

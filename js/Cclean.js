@@ -16,6 +16,7 @@ class Cclean{
         effect.clearRect(0, 0, 640, 960);
         crowArry.splice(0,  crowArry.length);
         danmakuArry.splice(0, danmakuArry.length);
+        keyArray.splice(0, keyArray.length);
         danmakuArryLength = 0;
         crowArryLength = 0;
         specialCardNum = 1;

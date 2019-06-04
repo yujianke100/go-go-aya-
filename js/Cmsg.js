@@ -51,9 +51,11 @@ class Cmsg{
             </tr>
         </table>
         `;
+        userInfo.updataScore();
         startBtn.innerHTML = "重新开始";
+        danmakuArry.splice(0, danmakuArry.length);
+        btnFlag = 0;
         startBtn.style.left = "130px";
         startBtn.style.top = "400px";
-        userInfo.updataScore();
     }
 }

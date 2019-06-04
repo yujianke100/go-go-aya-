@@ -16,9 +16,9 @@ class Ccontrol{
                  create.createDanmaku(6);
              }
          }
-         if(keycode == 88 && specialCardNum > 0){
+        //  if(keycode == 88 && specialCardNum > 0){
              
-         }
+        //  }
 
         if((keycode == 37) && ayaLeft > 0){ //left
             ayaLeft = ayaLeft - ayaSpeed + shiftSpeed;
@@ -112,7 +112,7 @@ class Ccontrol{
                     animation();
                 }
             }
-            else if(btnFlag == 0 && e.keyCode == 13){
+            else if(btnFlag == 0 && e.keyCode == 13 && !window.buttonIsFocused){
                 clean.initClean();
                 animation();
             }

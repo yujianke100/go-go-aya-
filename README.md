@@ -1,5 +1,5 @@
 # go-go-aya-
-# http://aya.shinnshi.xyz
+# http://aya.ayaya.press
 
 ## 增加分支：反作弊
 ## 东方project同人小游戏
@@ -12,6 +12,6 @@
 
 本游戏仅作学习交流使用
 
-主站：http://shinnshi.xyz
+主站：http://ayaya.press
 
 BY:登山学日文

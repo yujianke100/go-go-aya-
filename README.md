@@ -1,5 +1,5 @@
 # go-go-aya-
-# http://aya.shinnshi.xyz
+# https://yujianke100.github.io/go-go-aya/index.html
 
 ## 东方project同人小游戏
 
@@ -10,5 +10,3 @@
 若对原作者造成困扰，请随时联系站长处理
 
 本游戏仅作学习交流使用
-
-主站：http://shinnshi.xyz

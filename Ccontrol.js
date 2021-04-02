@@ -87,11 +87,11 @@ class Ccontrol{
                 specialCardShadowSwitch.innerHTML = `关闭特殊符卡阴影特效`;
             }
         });
-        outBtn.addEventListener("click", function(){
-            localStorage.clear();
-            alert("已退出！");
-            window.location.href = "./logIn/SignIn.html";
-        });
+        //outBtn.addEventListener("click", function(){
+        //    localStorage.clear();
+        //    alert("已退出！");
+        //    window.location.href = "./logIn/SignIn.html";
+        //});
      }
      KeyboardControl(){
         document.addEventListener("keydown",function(e){

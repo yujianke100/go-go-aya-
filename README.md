@@ -1,5 +1,5 @@
 # go-go-aya-
-# https://yujianke100.github.io/go-go-aya/index.html
+https://ayaya.jianke-yu.online
 
 ## 东方project同人小游戏
 

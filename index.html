@@ -30,11 +30,11 @@
         <div class="container" id="container">
             <div class="score">
                 <ul class="collapsible" data-collapsible="accordion">
-                    <li>
+                    <!-- <li>
                         <div class="collapsible-header" id="scoreListBtn">排行榜(前十)</div>
                         <div class="collapsible-body" id="scoreList">
                         </div>
-                    </li>
+                    </li> -->
                     <li>
                         <div class="collapsible-header">操作说明</div>
                         <div class="collapsible-body">
@@ -65,7 +65,7 @@
                             <p><button class="btn waves-effect waves-light" id="specialCardSwitch">关闭特殊符卡特效</button></p>
                             <p><button class="btn waves-effect waves-light"
                                     id="specialCardShadowSwitch">开启特殊符卡阴影特效</button></p>
-                            <p style="text-align: center"><button class="btn waves-effect waves-light"><a href="http://shinnshi.xyz" style="color: white">回到主站</a></button></p>
+                            <!-- <p style="text-align: center"><button class="btn waves-effect waves-light"><a href="http://shinnshi.xyz" style="color: white">回到主站</a></button></p> -->
                             <button class="btn outBtn red waves-effect waves-light" id="outBtn">退出登录</button>
                         </div>
                     </li>
@@ -78,7 +78,7 @@
                             <p>若对原作者造成困扰，请随时联系站长处理</p>
                             <p>本游戏仅作学习交流使用</p>
                             <p>源代码已公开于<a target="blank" href="https://github.com/yujianke100/go-go-aya-">GitHub</a></p>
-                            <p>主站：<a href="http://shinnshi.xyz">shinnshi.xyz</a></p>
+                            <!-- <p>主站：<a href="http://shinnshi.xyz">shinnshi.xyz</a></p> -->
                             <p>BY:登山学日文</p>
                         </div>
                     </li>
@@ -106,7 +106,9 @@
     </div>
     <div class="end"></div>
     <footer>
-        <audio src="http://music.163.com/song/media/outer/url?id=22636645.mp3" autoplay="autoplay" controls="controls"loop="loop"></audio>
+        <div id="myAudio">
+            <audio id="eleAudio" autoplay="autoplay" src="http://music.163.com/song/media/outer/url?id=22636645.mp3" loop="loop"></audio>
+        </div>
     </footer>
     <script src="./userInfo.js"></script>
     <script src="./js/variable.js"></script>
@@ -122,6 +124,26 @@
     <script src="./js/Cmsg.js"></script>
     <script src="./js/ajax.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var audio = document.getElementById("eleAudio");
+      
+          audio.oncanplay = function() {
+            console.log("音频可以播放");
+          };
+      
+          audio.onerror = function() {
+            console.log("音频无法播放");
+            replaceAudioSource();
+          };
+      
+        });
+      
+        function replaceAudioSource() {
+          var audioDiv = document.getElementById("myAudio");
+          audioDiv.innerHTML = '<iframe width="0" height="0" src="https://www.youtube.com/embed/Z6-aHtmSMkM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        }
+    </script>
 </body>
 
 </html>

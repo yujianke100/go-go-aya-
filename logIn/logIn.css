@@ -11,7 +11,7 @@ body{
 }
 .container{
     position: relative;
-    top: 100px;
+    top: 20px;
     width: 500px;
     height: 700px;
     background-color: rgb(245, 245, 245);

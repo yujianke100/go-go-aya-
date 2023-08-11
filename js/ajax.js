@@ -24,6 +24,6 @@ function ajaxRefresh(){
 
 userInfo.getScore();
 
-scoreListBtn.addEventListener("click", function(){
-    ajaxRefresh();
-})
+// scoreListBtn.addEventListener("click", function(){
+//     ajaxRefresh();
+// })

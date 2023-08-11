@@ -16,7 +16,6 @@
     <title>今天搞到了什么大新闻？</title>
 </head>
 <body>
-    <button class = "btn"><a href="http://shinnshi.xyz" style="color:white">回到主站</a></button>
     <div class="container">
         <div class="logInContainer" id = "logInContainer">
             <div class="logInBackground" id = "logInBackground"></div>
@@ -26,7 +25,7 @@
                 <div class="photoBorder"></div>
                 <h3 id = "loginTitile">记者身份确认</h3>
                 <div class="formDiv row" id = "formDiv">
-                    <form class="col s12" action="downdata.php" method="post" id="text_form_in">
+                    <form class="col s12" method="post" id="text_form_in">
                         <div class="row">
                             <div class="input-field col s12">
                                 <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
@@ -40,7 +39,7 @@
                     </form>
                 </div>
                 <div class="btnDiv">
-                        <button class="signInCheckBtn btn" id = "signInCheckBtn">登陆</button>
+                        <button class="signInCheckBtn btn" id = "signInCheckBtn">开始</button>
                         <button class="signUpCheckBtn btn" id = "signUpCheckBtn">完成</button>
                         <button class="signUpBtn btn white" id = "signUpBtn">注册</button>
                 </div>
@@ -48,6 +47,28 @@
         </div>
     </div>
     <script src="./signScript.js"></script>
-    <audio src="http://music.163.com/song/media/outer/url?id=714920.mp3" autoplay="autoplay" loop="loop"></audio>
+    <div id="myAudioIn">
+        <audio id="eleAudioIn" src="http://music.163.com/song/media/outer/url?id=714920.mp3" autoplay="autoplay" loop="loop"></audio>
+    </div>    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var audio = document.getElementById("eleAudioIn");
+      
+          audio.oncanplay = function() {
+            console.log("音频可以播放");
+          };
+      
+          audio.onerror = function() {
+            console.log("音频无法播放");
+            replaceAudioSource();
+          };
+      
+        });
+      
+        function replaceAudioSource() {
+          var audioDiv = document.getElementById("myAudioIn");
+          audioDiv.innerHTML = '<iframe width="0" height="0" src="https://www.youtube.com/embed/SEBUD_4T9XA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        }
+    </script>
 </body>
 </html>

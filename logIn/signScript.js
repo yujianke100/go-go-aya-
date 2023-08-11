@@ -62,14 +62,14 @@ var mb = BrowserType();
 
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     alert("请在PC端使用Chromee或Chrome内核的浏览器浏览本站！");
-    window.location.href = "http://shinnshi.xyz";
+    window.location.href = "http://baidu.com";
 } else {
     if (mb == "Chrome") {
         ;
     }
     else {
         alert("请使用Chrome或Chrome内核的浏览器浏览本站！");
-        window.location.href = "http://shinnshi.xyz";
+        window.location.href = "http://baidu.com";
     }
 }
 
@@ -82,7 +82,7 @@ function getQueryString(name) {
 
 function changePage0(){
     formDiv.innerHTML = `
-    <form class="col s12" action="updata.php" method="post" id="text_form">
+    <form class="col s12" method="post" id="text_form">
         <div class="row">
             <div class="input-field col s12">
                 <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
@@ -132,8 +132,27 @@ signUpCheckBtn.addEventListener("click", function(){
             return false;
         }
         else{
-            text_form.submit();
-            return true;
+            formDiv.innerHTML = `
+            <div class="row">
+                <div class="input-field col s12">
+                    <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
+                    <label for="name">姓名：</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="password"  class = "validate" name="pass" id="pass" value=""  maxlength="18">
+                    <label for="pass">神秘代码：</label>
+                </div>
+            </div>
+            `;
+            signUpBtn.innerHTML = "注册";
+            $(signInCheckBtn).show();
+            $(signUpCheckBtn).hide();
+            loginTitile.innerHTML = "记者身份确认";
+            logInBackground.style.backgroundImage = "url(../pic/shikieiki.jpg)";
+            logInBackground.style.backgroundPosition = "-100px 0";
+            newsTitile.innerHTML = `閻魔様の暴走は一体何故か
+            ？`;
+            return false;
         }
 
 })
@@ -150,23 +169,23 @@ signInCheckBtn.addEventListener("click", function(){
     }
     var userArray = [name, pass];
     localStorage.setItem("userInformation",userArray);
-    let text_form_in = document.getElementById('text_form_in');
-    text_form_in.submit();
-    return true;
+    // let text_form_in = document.getElementById('text_form_in');
+    // text_form_in.submit();
+    window.location.assign('../index.html');
+    return false;
 });
 
 signUpBtn.addEventListener("click",function(){
+    changePage0();
     if(modoFlag == 1)
         modoFlag = 0;
     else
         modoFlag = 1;
-    window.history.replaceState({}, 0, 'http://aya.shinnshi.xyz/logIn/SignIn.html?id=' + modoFlag);
     if(modoFlag == 0){
         changePage0();
     }
     else{
         formDiv.innerHTML = `
-        <form class="col s12" action="downdata.php" method="post" id="text_form_in">
             <div class="row">
                 <div class="input-field col s12">
                     <input class = "validate" type="text" value="" id="name" name="name" maxlength="12">
@@ -177,7 +196,6 @@ signUpBtn.addEventListener("click",function(){
                     <label for="pass">神秘代码：</label>
                 </div>
             </div>
-        </form>
         `;
         signUpBtn.innerHTML = "注册";
         $(signInCheckBtn).show();

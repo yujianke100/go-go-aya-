@@ -1,3 +1,4 @@
+alert('请按下F11\nPlease press F11');
 var draw = new Cdraw();
 var create = new Ccreate();
 var control = new Ccontrol();

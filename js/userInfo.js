@@ -6,6 +6,6 @@ class CuserInfo{
 
     }
     getScore(){
-        $.post('./update.php');
+        // $.post('./update.php');
     }
 }
